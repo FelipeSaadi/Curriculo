@@ -40,12 +40,72 @@ function getAbilities() {
     let data = JSON.parse(xhttp.responseText)
 
     data.forEach(ability => {
-        console.log(ability)
         $("#abilities-section ul")[0].innerHTML += `<li>${ability.name}</li>`
     });
 }
 getAbilities()
 
-// hobbies.forEach(item => {
-//     $("#hobbies-section ul")[0].innerHTML += `<li>${item}</li>`
-// })
+function getProfessionalHistory() {
+    let url = "professionalhistory"
+
+    let xhttp = new XMLHttpRequest()
+    xhttp.open("get", url, false)
+    xhttp.send()
+
+    let data = JSON.parse(xhttp.responseText)
+
+    data.forEach(professional => {
+        $("#professional-section")[0].innerHTML += `
+            <div class="section">
+                <h3 class="section-subtitle">
+                    ${professional.title}
+                </h3>
+                <h4 class="section-subtitle-description">
+                    ${professional.subtitle}
+                </h4>
+                ${professional.description ? `<p class="section-description">${professional.description}</p>` : ' '}
+            </div>
+        `
+    })
+}
+getProfessionalHistory()
+
+function getEducationalHistory() {
+    let url = "educationalhistory"
+
+    let xhttp = new XMLHttpRequest()
+    xhttp.open("get", url, false)
+    xhttp.send()
+
+    let data = JSON.parse(xhttp.responseText)
+
+    data.forEach(education => {
+        $("#educacional-section")[0].innerHTML += `
+            <div class="section">
+                <h3 class="section-subtitle">
+                    ${education.title}
+                </h3>
+                <h4 class="section-subtitle-description">
+                    ${education.subtitle}
+                </h4>
+                ${education.description ? `<p class="section-description">${education.description}</p>` : ' '}
+            </div>
+        `
+    })
+}
+getEducationalHistory()
+
+function getHobbies() {
+    let url = "/hobbies"
+
+    let xhttp = new XMLHttpRequest()
+    xhttp.open("get", url, false)
+    xhttp.send()
+
+    let data = JSON.parse(xhttp.responseText)
+
+    data.forEach(hobbie => {
+        $("#hobbies-section ul")[0].innerHTML += `<li>${hobbie.name}</li>`
+    })
+}
+getHobbies()
