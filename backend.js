@@ -18,7 +18,7 @@ app.get('/personalData', (req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
-  var sql = 'SELECT * FROM PersonalData';
+	var sql = 'SELECT * FROM PersonalData';
 	db.all(sql, [],  (err, rows ) => {
 		if (err) {
 		    throw err;
