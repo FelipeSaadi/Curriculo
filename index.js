@@ -1,7 +1,7 @@
 const express = require('express'); 
 const app = express();
 
-const hostname = '/';
+const hostname = 'https://curriculum-felipe-saadi.herokuapp.com/';
 const port = 3000;
 const sqlite3 = require('sqlite3').verbose();
 const DBPATH = 'curriculo.db';
