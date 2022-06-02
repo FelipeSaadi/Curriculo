@@ -8,15 +8,12 @@
     "main": "index.js",
     "scripts": {
       "start": "node index.js",
-      "test": "node test.js",
-      
-      "postinstall": "./node_modules/bower/bin/bower install && npm run build"
+      "test": "node test.js"
     },
     "dependencies": {
       "ejs": "^3.1.5",
       "express": "^4.15.2",
-      "sqlite3": "^5",
-      "bower":"^1.8.0"
+      "sqlite3": "^5"
     },
     "devDependencies": {
       "got": "^11.3.0",
@@ -24,7 +21,7 @@
     },
     "repository": {
       "type": "git",
-      "url": "https://github.com/heroku/node-js-getting-started"
+      "url": "https://github.com/heroku/curriculum-felipe-saadI"
     },
     "keywords": [
       "node",
