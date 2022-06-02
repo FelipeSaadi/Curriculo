@@ -33,7 +33,7 @@ app.get('/abilities', (req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
-  var sql = 'SELECT * FROM Abilities';
+	var sql = 'SELECT * FROM Abilities';
 	db.all(sql, [],  (err, rows ) => {
 		if (err) {
 		    throw err;
@@ -48,7 +48,7 @@ app.get('/hobbies', (req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
-  var sql = 'SELECT * FROM Hobbies';
+	var sql = 'SELECT * FROM Hobbies';
 	db.all(sql, [],  (err, rows ) => {
 		if (err) {
 		    throw err;

@@ -38,7 +38,8 @@ function getAbilities() {
     xhttp.send()
 
     let data = JSON.parse(xhttp.responseText)
-
+    
+    $("#abilities-section ul")[0].innerHTML = ''
     data.forEach(ability => {
         $("#abilities-section ul")[0].innerHTML += `<li>${ability.name}</li>`
     });
@@ -54,6 +55,7 @@ function getProfessionalHistory() {
 
     let data = JSON.parse(xhttp.responseText)
 
+    $("#professional-section")[0].innerHTML = ''
     data.forEach(professional => {
         $("#professional-section")[0].innerHTML += `
             <div class="section">
@@ -79,6 +81,7 @@ function getEducationalHistory() {
 
     let data = JSON.parse(xhttp.responseText)
 
+    $("#educacional-section")[0].innerHTML = ''
     data.forEach(education => {
         $("#educacional-section")[0].innerHTML += `
             <div class="section">
@@ -104,6 +107,7 @@ function getHobbies() {
 
     let data = JSON.parse(xhttp.responseText)
 
+    $("#hobbies-section ul")[0].innerHTML = ''
     data.forEach(hobbie => {
         $("#hobbies-section ul")[0].innerHTML += `<li>${hobbie.name}</li>`
     })

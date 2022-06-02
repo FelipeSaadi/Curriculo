@@ -101,13 +101,14 @@ a {
     margin-bottom: 10px;
 }
 
-.main-sections .section-title {
+#main .section-title {
     height: 60px;
     display: flex;
     align-items: center;
     margin-top: 30px;
     padding-left: 20px;
     background-color: #FFE7D2;
+    color: #676870;
 }
 
 .section-subtitle {
