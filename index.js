@@ -1,7 +1,7 @@
 const express = require('express'); 
 const app = express();
 
-const hostname = '127.0.0.1';
+const hostname = '/';
 const port = 3000;
 const sqlite3 = require('sqlite3').verbose();
 const DBPATH = 'curriculo.db';
