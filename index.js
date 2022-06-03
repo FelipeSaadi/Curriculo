@@ -90,6 +90,6 @@ app.get('/educationalhistory', (req, res) => {
 
 
 /* Inicia o servidor */
-app.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+app.listen(port, () => {
+  console.log(`Server running on ${port}/`);
 });
