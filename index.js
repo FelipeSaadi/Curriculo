@@ -1,15 +1,15 @@
 const express = require('express'); 
 const app = express();
 
-const hostname = 'https://curriculum-felipe-saadi.herokuapp.com/';
+const path = require('path')
 const port = 3000;
-const sqlite3 = require('sqlite3').verbose();
-const DBPATH = 'curriculo.db';
+const sqlite3 = require('sqlite3').verbose()
+const DBPATH = path.join(__dirname, "curriculo.db")
 
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-app.use(express.static("./"));
+app.use(express.static(__dirname));
 
 app.use(express.json());
 
